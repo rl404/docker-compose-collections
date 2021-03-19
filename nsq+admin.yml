@@ -1,0 +1,33 @@
+version: '2.4'
+
+services:
+  nsq:
+    container_name: nsq
+    image: nsqio/nsq:latest
+    command: /nsqd --lookupd-tcp-address=nsq_lookup:4160
+    ports:
+      - 4150:4150
+      - 4151:4151
+    restart: always
+    depends_on:
+      - nsq_lookup
+    volumes:
+      - nsq-volume:/data
+  nsq_lookup:
+    image: nsqio/nsq:latest
+    command: /nsqlookupd
+    ports:
+      - 4160:4160
+      - 4161:4161
+    restart: always
+  nsq_admin:
+    image: nsqio/nsq:latest
+    command: /nsqadmin --lookupd-http-address=nsq_lookup:4161
+    depends_on:
+      - nsq_lookup
+    ports:
+      - 4171:4171
+    restart: always
+
+volumes:
+  nsq-volume:

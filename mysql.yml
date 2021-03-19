@@ -1,0 +1,16 @@
+version: '2.4'
+
+services:
+  mysql:
+    container_name: mysql
+    image: mysql:latest
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_ROOT_PASSWORD: pass123
+    restart: always
+    volumes:
+      - mysql-volume:/var/lib/mysql
+
+volumes:
+  mysql-volume:

@@ -1,0 +1,19 @@
+version: '2.4'
+
+services:
+  rabbitmq:
+    hostname: rabbitmq
+    container_name: rabbitmq
+    image: rabbitmq:management
+    ports:
+      - 5672:5672
+      - 15672:15672
+    restart: always
+    environment:
+      RABBITMQ_DEFAULT_USER: root
+      RABBITMQ_DEFAULT_PASS: pass123
+    volumes:
+      - rabbitmq-volume:/var/lib/rabbitmq/mnesia
+
+volumes:
+  rabbitmq-volume:

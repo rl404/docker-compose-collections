@@ -1,0 +1,16 @@
+version: '2.4'
+
+services:
+  postgres:
+    container_name: postgres
+    image: postgres:alpine
+    ports:
+      - 5432:5432
+    restart: always
+    environment:
+      POSTGRES_PASSWORD: pass123
+    volumes:
+      - postgres-volume:/var/lib/postgres/data
+
+volumes:
+  postgres-volume:

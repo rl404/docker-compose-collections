@@ -1,0 +1,15 @@
+version: '2.4'
+
+services:
+  redis:
+    container_name: redis
+    image: redis:alpine
+    command: redis-server --requirepass pass123
+    ports:
+      - 6379:6379
+    restart: always
+    volumes:
+      - redis-volume:/data
+
+volumes:
+  redis-volume:

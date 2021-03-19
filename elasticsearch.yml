@@ -1,0 +1,26 @@
+version: '2.4'
+
+services:
+  elasticsearch:
+    container_name: elasticsearch
+    image: docker.elastic.co/elasticsearch/elasticsearch:7.11.1
+    restart: always
+    environment:
+      discovery.type: single-node
+      bootstrap.memory_lock: 'true'
+      ES_JAVA_OPTS: '-Xms512m -Xmx512m'
+      xpack.security.enabled: 'true'
+      ELASTIC_USERNAME: elastic
+      ELASTIC_PASSWORD: pass123
+    ulimits:
+      memlock:
+        soft: -1
+        hard: -1
+    ports:
+      - 9200:9200
+      - 9300:9300
+    volumes:
+    - elasticsearch-volume:/usr/share/elasticsearch/data
+
+volumes:
+  elasticsearch-volume:
