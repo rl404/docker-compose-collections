@@ -1,4 +1,4 @@
-version: '2.4'
+version: "2.4"
 
 services:
   mongo:
@@ -15,3 +15,4 @@ services:
 
 volumes:
   mongo-volume:
+    name: mongo-volume

@@ -1,4 +1,4 @@
-version: '2.4'
+version: "2.4"
 
 services:
   nsq:
@@ -31,3 +31,4 @@ services:
 
 volumes:
   nsq-volume:
+    name: nsq-volume

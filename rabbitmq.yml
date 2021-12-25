@@ -1,4 +1,4 @@
-version: '2.4'
+version: "2.4"
 
 services:
   rabbitmq:
@@ -16,3 +16,4 @@ services:
 
 volumes:
   rabbitmq-volume:
+    name: rabbitmq-volume
