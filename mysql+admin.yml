@@ -1,4 +1,4 @@
-version: '2.4'
+version: "2.4"
 
 services:
   mysql:
@@ -22,3 +22,4 @@ services:
 
 volumes:
   mysql-volume:
+    name: mysql-volume

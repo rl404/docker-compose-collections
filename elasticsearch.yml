@@ -1,4 +1,4 @@
-version: '2.4'
+version: "2.4"
 
 services:
   elasticsearch:
@@ -7,9 +7,9 @@ services:
     restart: always
     environment:
       discovery.type: single-node
-      bootstrap.memory_lock: 'true'
-      ES_JAVA_OPTS: '-Xms512m -Xmx512m'
-      xpack.security.enabled: 'true'
+      bootstrap.memory_lock: "true"
+      ES_JAVA_OPTS: "-Xms512m -Xmx512m"
+      xpack.security.enabled: "true"
       ELASTIC_USERNAME: elastic
       ELASTIC_PASSWORD: pass123
     ulimits:
@@ -20,7 +20,8 @@ services:
       - 9200:9200
       - 9300:9300
     volumes:
-    - elasticsearch-volume:/usr/share/elasticsearch/data
+      - elasticsearch-volume:/usr/share/elasticsearch/data
 
 volumes:
   elasticsearch-volume:
+    name: elasticsearch-volume

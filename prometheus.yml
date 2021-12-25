@@ -1,0 +1,18 @@
+version: "2.4"
+
+services:
+  prometheus:
+    container_name: prometheus
+    image: prom/prometheus:v2.32.0
+    command:
+      - "--config.file=/etc/prometheus/prometheus.yml"
+    ports:
+      - 9090:9090
+    restart: always
+    volumes:
+      - ./prometheus-cfg.yml:/etc/prometheus/prometheus.yml
+      - prometheus-volume:/prometheus
+
+volumes:
+  prometheus-volume:
+    name: prometheus-volume

@@ -14,6 +14,7 @@ Just a collection of [`docker-compose.yml`](https://docs.docker.com/compose/) fo
   - [NSQ](https://nsq.io/) & admin
 - Others
   - [Elasticsearch](https://www.elastic.co/) & [Kibana](https://www.elastic.co/kibana)
+  - [Prometheus](https://prometheus.io/) & [Grafana](https://grafana.com/)
 
 ## Requirement
 

@@ -1,4 +1,4 @@
-version: '2.4'
+version: "2.4"
 
 services:
   redis:
@@ -13,3 +13,4 @@ services:
 
 volumes:
   redis-volume:
+    name: redis-volume
