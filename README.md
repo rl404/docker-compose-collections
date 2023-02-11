@@ -12,6 +12,7 @@ Just a collection of [`docker-compose.yml`](https://docs.docker.com/compose/) fo
 - Pubsub
   - [RabbitMQ](https://www.rabbitmq.com/) & admin
   - [NSQ](https://nsq.io/) & admin
+  - [Kafka](https://kafka.apache.org/) & [admin](https://github.com/provectus/kafka-ui)
 - Others
   - [Elasticsearch](https://www.elastic.co/) & [Kibana](https://www.elastic.co/kibana)
   - [Prometheus](https://prometheus.io/) & [Grafana](https://grafana.com/)
@@ -36,3 +37,9 @@ Just a collection of [`docker-compose.yml`](https://docs.docker.com/compose/) fo
     ```bash
     docker-compose -f filename.yml up
     ```
+
+## License
+
+MIT License
+
+Copyright (c) 2021 Axel
