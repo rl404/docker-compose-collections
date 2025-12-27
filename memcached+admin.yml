@@ -1,14 +1,12 @@
-version: "2.4"
-
 services:
   memcached:
     container_name: memcached
-    image: memcached:alpine
+    image: memcached:1.6.12
     ports:
       - 11211:11211
     restart: always
   admin:
     container_name: memcached-admin
-    image: jacksoncage/phpmemcachedadmin:latest
+    image: alphayax/phpmemcachedadmin:latest
     ports:
       - 8081:80
