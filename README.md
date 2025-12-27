@@ -25,18 +25,18 @@ Just a collection of [`docker-compose.yml`](https://docs.docker.com/compose/) fo
 ## Installation
 
 1. Clone this repo.
-    ```bash
-    git clone https://github.com/rl404/docker-compose-collections.git
-    ```
+   ```bash
+   git clone https://github.com/rl404/docker-compose-collections.git
+   ```
 2. Go inside.
-    ```bash
-    cd docker-compose-collections
-    ```
+   ```bash
+   cd docker-compose-collections
+   ```
 3. Modify the `yml` file that you want to build especially the `environment` part.
 4. Build and run your desired rcontainers.
-    ```bash
-    docker-compose -f filename.yml up
-    ```
+   ```bash
+   docker compose -f filename.yml up
+   ```
 
 ## License
 

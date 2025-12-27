@@ -1,9 +1,7 @@
-version: "2.4"
-
 services:
   memcached:
     container_name: memcached
-    image: memcached:alpine
+    image: memcached:latest
     ports:
       - 11211:11211
     restart: always

@@ -1,5 +1,3 @@
-version: "2.4"
-
 services:
   nsq:
     container_name: nsq
@@ -14,6 +12,7 @@ services:
     volumes:
       - nsq-volume:/data
   nsq_lookup:
+    container_name: nsq_lookup
     image: nsqio/nsq:latest
     command: /nsqlookupd
     ports:
@@ -21,6 +20,7 @@ services:
       - 4161:4161
     restart: always
   nsq_admin:
+    container_name: nsq_admin
     image: nsqio/nsq:latest
     command: /nsqadmin --lookupd-http-address=nsq_lookup:4161
     depends_on:
